@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <div className="NavBar">
         <Link to="/" className="title">🐙 Makan Yok!</Link>
-        <p className="desc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="desc"> Makan Yok is a collaborative food guide powered by the community. We try our best to brew the lists to match your tastebuds. Currently, we are actively seeking content writers to provide various food lists for our viewers.</p>
       </div>
     );
   }

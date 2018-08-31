@@ -4,7 +4,7 @@ class Entry extends Component {
   render(props) {
     return (
       <div className="Entry">
-        <p className="name top">{this.props.data.name}</p>
+        <a className="name top" href={this.props.data.link} target="_blank">{this.props.data.name}</a>
         <div className="container-bottom-align">
           <p className="cuisine top">{this.props.data.cuisine}</p>
         </div>

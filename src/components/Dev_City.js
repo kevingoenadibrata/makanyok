@@ -81,7 +81,6 @@ class Dev_City extends Component {
   }
 
   createObject = () =>{
-    console.log('WHAT');
     var foodArr = [];
     var foodArr2 = [];
     var lastIndex = -1;
@@ -95,7 +94,8 @@ class Dev_City extends Component {
         name: this.state.fileData[i][0],
         cuisine: this.state.fileData[i][1],
         price: this.state.fileData[i][2],
-        desc: this.state.fileData[i][3]
+        desc: this.state.fileData[i][4],
+        link: this.state.fileData[i][3]
       });
     }
 
@@ -104,7 +104,8 @@ class Dev_City extends Component {
         name: this.state.fileData[i][0],
         cuisine: this.state.fileData[i][1],
         price: this.state.fileData[i][2],
-        desc: this.state.fileData[i][3]
+        desc: this.state.fileData[i][4],
+        link: this.state.fileData[i][3]
       });
     }
 

@@ -3,19 +3,6 @@ import Entry from './Entry';
 
 class MainArea_Content extends Component {
   render(props) {
-    const tempData = {
-      name: 'Gyukaku',
-      cuisine: 'Japanese BBQ',
-      desc: 'Decent priced japanese bbq. go at happy hour to get cheap prices.',
-      price: '$$'
-    }
-
-    const tempData2 = {
-      name: 'Sweet Chick',
-      cuisine: 'Brunch',
-      desc: 'Chicken & Waffles. So good. Mac n cheese is nice and the waffles have different & interesting flavors. should try apple cinnamon or rosemary mushroom',
-      price: '$'
-    }
     var cityIndex = -1;
     var countryIndex = -1;
     if(this.props.master)
@@ -36,11 +23,13 @@ class MainArea_Content extends Component {
     return (
       <div className="MainArea">
         <div>
-          <h1 className="city-title">{this.props.master.countries[countryIndex].cities[cityIndex].emoji + " " + this.props.master.countries[countryIndex].cities[cityIndex].city}</h1>
+          <h1 className="city-title">{this.props.master.countries[countryIndex].cities[cityIndex].city}</h1>
+          <h2 className="city-author">{"by " + this.props.master.countries[countryIndex].cities[cityIndex].author + " " + this.props.master.countries[countryIndex].cities[cityIndex].emoji}</h2>
           <div className="hashtag">#mustgo</div>
           {this.props.master.countries[countryIndex].cities[cityIndex].foodArray1.map(items => <Entry data={items}/>)}
           <div className="hashtag">#goodfood</div>
           {this.props.master.countries[countryIndex].cities[cityIndex].foodArray2.map(items => <Entry data={items}/>)}
+          <div className="space"></div>
         </div>
       </div>
     );
